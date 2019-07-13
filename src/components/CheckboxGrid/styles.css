@@ -2,28 +2,29 @@
   display: inline-grid;
   grid-template-columns: repeat(40, 1fr);
 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  /* background-color: #b794f6; */
   background-color: #6200ee;
-  box-shadow: rgba(0, 0, 0, 0.5) 0 0 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .CheckboxGrid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 20px;
+  }
 }
 
 .CheckboxGrid__checkbox {
   appearance: none;
   background-color: rgba(255, 255, 255, 0.9);
-  /* background-color: #b794f6; */
-  /* border: 1px solid rgba(255, 255, 255, 0.2); */
 
   width: 16px;
   height: 16px;
 }
 
 .CheckboxGrid__checkbox:checked {
-  /* background-color: rgba(255, 255, 255, 0.7); */
   background-color: #6200ee;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.31 78.54"><path fill="white" d="M32.88,78.54,3,48.42A10.5,10.5,0,0,1,18,33.64l12,12.08L58.14,4.56A10.5,10.5,0,0,1,75.46,16.44Z"/></svg>');
   background-repeat: no-repeat;

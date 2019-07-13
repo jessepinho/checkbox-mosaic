@@ -1,3 +1,36 @@
+html {
+  height: 100%;
+}
+
 body {
-  background-color: #6200ee;
+  height: 100%;
+
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6200ee+0,c700dd+33,d800ad+67,6200ee+100 */
+  background: #6200ee; /* Old browsers */
+  background: -moz-linear-gradient(
+    -45deg,
+    #6200ee 0%,
+    #c700dd 33%,
+    #d800ad 67%,
+    #6200ee 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    -45deg,
+    #6200ee 0%,
+    #c700dd 33%,
+    #d800ad 67%,
+    #6200ee 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    #6200ee 0%,
+    #c700dd 33%,
+    #d800ad 67%,
+    #6200ee 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6200ee', endColorstr='#6200ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }

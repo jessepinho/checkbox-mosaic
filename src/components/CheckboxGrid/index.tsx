@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useFirebaseApp, useFirestoreDoc } from 'reactfire'
 
 import './styles.css'
 
@@ -12,13 +13,22 @@ const getCoordinates = (xIndex: number, yIndex: number): string =>
   `${xIndex},${yIndex}`
 
 const CheckboxGrid: React.FC<{}> = props => {
-  const [checked, setChecked] = useState<Checked>({})
+  // const [checked, setChecked] = useState<Checked>({})
+
+  const firebaseApp = useFirebaseApp()
+  const sandboxRef = firebaseApp
+    .firestore()
+    .collection('mosaics')
+    .doc('sandbox')
+
+  const sandbox = useFirestoreDoc<any>(sandboxRef)
+  const checked: Checked = sandbox.data()
 
   const toggleCheckbox = (coordinates: string) => {
-    setChecked(currentChecked => ({
-      ...currentChecked,
-      [coordinates]: !currentChecked[coordinates],
-    }))
+    sandboxRef.set({
+      ...checked,
+      [coordinates]: !checked[coordinates],
+    })
   }
 
   return (

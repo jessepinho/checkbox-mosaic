@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useFirebaseApp, useFirestoreDoc } from 'reactfire'
 
 import './styles.css'
@@ -13,8 +13,6 @@ const getCoordinates = (xIndex: number, yIndex: number): string =>
   `${xIndex},${yIndex}`
 
 const CheckboxGrid: React.FC<{}> = props => {
-  // const [checked, setChecked] = useState<Checked>({})
-
   const firebaseApp = useFirebaseApp()
   const sandboxRef = firebaseApp
     .firestore()

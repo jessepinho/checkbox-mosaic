@@ -18,7 +18,9 @@
     "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,6 +38,8 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "prettier": "^1.18.2"
-  }
+  },
+  "homepage": "https://jessepinho.github.io/checkbox-mosaic"
 }

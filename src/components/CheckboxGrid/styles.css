@@ -1,3 +1,17 @@
+@keyframes check-it-out {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .CheckboxGrid {
   display: inline-grid;
   grid-template-columns: repeat(40, 1fr);
@@ -25,6 +39,8 @@
 }
 
 .CheckboxGrid__checkbox:checked {
+  animation: check-it-out 0.35s;
+
   background-color: #6200ee;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.31 78.54"><path fill="white" d="M32.88,78.54,3,48.42A10.5,10.5,0,0,1,18,33.64l12,12.08L58.14,4.56A10.5,10.5,0,0,1,75.46,16.44Z"/></svg>');
   background-repeat: no-repeat;

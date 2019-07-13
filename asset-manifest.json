@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/checkbox-mosaic/static/css/main.db8e424e.chunk.css",
+    "main.js": "/checkbox-mosaic/static/js/main.66c71986.chunk.js",
+    "main.js.map": "/checkbox-mosaic/static/js/main.66c71986.chunk.js.map",
+    "runtime~main.js": "/checkbox-mosaic/static/js/runtime~main.6715f622.js",
+    "runtime~main.js.map": "/checkbox-mosaic/static/js/runtime~main.6715f622.js.map",
+    "static/js/2.c201882b.chunk.js": "/checkbox-mosaic/static/js/2.c201882b.chunk.js",
+    "static/js/2.c201882b.chunk.js.map": "/checkbox-mosaic/static/js/2.c201882b.chunk.js.map",
+    "index.html": "/checkbox-mosaic/index.html",
+    "precache-manifest.cc0e5d769ac9754bdfc3d12ac645e842.js": "/checkbox-mosaic/precache-manifest.cc0e5d769ac9754bdfc3d12ac645e842.js",
+    "service-worker.js": "/checkbox-mosaic/service-worker.js",
+    "static/css/main.db8e424e.chunk.css.map": "/checkbox-mosaic/static/css/main.db8e424e.chunk.css.map"
+  }
+}

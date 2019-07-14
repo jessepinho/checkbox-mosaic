@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "43fcc0a07f0f4753e63f1e42909e2a19",
+    "revision": "34f7e070548a284a87f5bffb4f1ee090",
     "url": "/checkbox-mosaic/index.html"
   },
   {

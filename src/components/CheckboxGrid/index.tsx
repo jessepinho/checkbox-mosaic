@@ -1,34 +1,17 @@
 import React from 'react'
-import { useFirebaseApp, useFirestoreDoc } from 'reactfire'
 
+import { Checked } from './types'
 import './styles.css'
 
 const DIMENSIONS = { width: 40, height: 40 }
 
-interface Checked {
-  [coordinates: string]: boolean
-}
-
 const getCoordinates = (xIndex: number, yIndex: number): string =>
   `${xIndex},${yIndex}`
 
-const CheckboxGrid: React.FC<{}> = props => {
-  const firebaseApp = useFirebaseApp()
-  const sandboxRef = firebaseApp
-    .firestore()
-    .collection('mosaics')
-    .doc('sandbox')
-
-  const sandbox = useFirestoreDoc<any>(sandboxRef)
-  const checked: Checked = sandbox.data()
-
-  const toggleCheckbox = (coordinates: string) => {
-    sandboxRef.set({
-      ...checked,
-      [coordinates]: !checked[coordinates],
-    })
-  }
-
+const CheckboxGrid: React.FC<{
+  checked?: Checked
+  toggleCheckbox: (coordinates: string) => void
+}> = ({ checked = {}, toggleCheckbox }) => {
   return (
     <div className="CheckboxGrid">
       {Array(DIMENSIONS.width)

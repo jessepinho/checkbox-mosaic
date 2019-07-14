@@ -1,14 +1,17 @@
 @keyframes check-it-out {
   0% {
     transform: scale(1);
+    opacity: 1;
   }
 
   50% {
     transform: scale(3);
+    opacity: 0.25; /* makes it easier on the eyes — not so bright */
   }
 
   100% {
     transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -36,7 +39,7 @@
 }
 
 .CheckboxGrid__checkbox:checked {
-  animation: check-it-out 0.35s;
+  animation: check-it-out 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   background-color: transparent;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.31 78.54"><path fill="white" d="M32.88,78.54,3,48.42A10.5,10.5,0,0,1,18,33.64l12,12.08L58.14,4.56A10.5,10.5,0,0,1,75.46,16.44Z"/></svg>');

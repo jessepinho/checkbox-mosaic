@@ -15,9 +15,15 @@ const CheckboxGridFirebaseContainer: React.FC<{}> = () => {
   const checked: Checked = sandbox.data()
 
   const toggleCheckbox = (coordinates: string) => {
+    const value = !checked[coordinates]
     sandboxRef.set({
       ...checked,
-      [coordinates]: !checked[coordinates],
+      [coordinates]: value,
+    })
+    window.gtag('event', 'Toggle checkbox', {
+      event_category: 'Drawing',
+      event_label: coordinates,
+      value: value ? 1 : 0,
     })
   }
 

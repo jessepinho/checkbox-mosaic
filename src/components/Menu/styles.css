@@ -1,0 +1,51 @@
+.Menu {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+
+.Menu__toggle-button {
+  appearance: none;
+  background: white;
+  border: 1px solid #ec407a;
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+
+  color: transparent;
+
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px; */
+  box-shadow: #ec407a 0 0 10px;
+
+  transition: box-shadow 0.35s;
+
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ec407a+0,3f51b5+100 */
+  background: #ec407a; /* Old browsers */
+  background: -moz-linear-gradient(
+    -45deg,
+    #ec407a 0%,
+    #3f51b5 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    -45deg,
+    #ec407a 0%,
+    #3f51b5 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    #ec407a 0%,
+    #3f51b5 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ec407a', endColorstr='#3f51b5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.Menu__toggle-button:hover {
+  box-shadow: #ec407a 0 0 30px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .Menu__toggle-button {
+    height: 88px;
+    width: 88px;
+  }
+}

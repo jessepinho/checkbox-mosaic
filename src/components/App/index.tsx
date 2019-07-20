@@ -5,9 +5,10 @@ import 'firebase/performance'
 
 import React from 'react'
 
-import CheckboxGridFirebaseContainer from '../CheckboxGrid/CheckboxGridFirebaseContainer'
-import './styles.css'
 import CheckboxGrid from '../CheckboxGrid'
+import CheckboxGridFirebaseContainer from '../CheckboxGrid/CheckboxGridFirebaseContainer'
+import Menu from '../Menu'
+import './styles.css'
 
 const firebaseConfig = { projectId: 'checkbox-mosaic' }
 
@@ -17,6 +18,7 @@ const App: React.FC = () => (
       fallback={<CheckboxGrid toggleCheckbox={() => {}} />}
       traceId="loadMosaic"
     >
+      <Menu />
       <CheckboxGridFirebaseContainer />
     </SuspenseWithPerf>
   </FirebaseAppProvider>
